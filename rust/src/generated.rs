@@ -133,6 +133,7 @@ pub const GRAPH_ENCODING_TENSORFLOW: GraphEncoding = GraphEncoding(2);
 pub const GRAPH_ENCODING_PYTORCH: GraphEncoding = GraphEncoding(3);
 pub const GRAPH_ENCODING_TENSORFLOWLITE: GraphEncoding = GraphEncoding(4);
 pub const GRAPH_ENCODING_AUTODETECT: GraphEncoding = GraphEncoding(5);
+pub const GRAPH_ENCODING_LLAMACPP: GraphEncoding = GraphEncoding(6);
 impl GraphEncoding {
     pub const fn raw(&self) -> u8 {
         self.0
@@ -146,6 +147,7 @@ impl GraphEncoding {
             3 => "PYTORCH",
             4 => "TENSORFLOWLITE",
             5 => "AUTODETECT",
+            6 => "LLAMACPP",
             _ => unsafe { core::hint::unreachable_unchecked() },
         }
     }
